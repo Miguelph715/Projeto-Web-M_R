@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte ao Cliente</title>
+    <link href="CSS/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Suporte ao Cliente</h1>
+    </header>
+    <main>
+        <form action="/submit-support" method="post">
+            <div class="form-section">
+                <h2>Informações Pessoais</h2>
+                <table>
+                    <tr>
+                        <td><label for="name">Nome:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Número de Telemóvel:</label></td>
+                        <td><input type="tel" id="phone" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">País:</label></td>
+                        <td><input type="text" id="country" name="country" required></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-section">
+                <h2>Detalhes do Problema</h2>
+                <table>
+                    <tr>
+                        <td><label for="issue">Descrição do Problema:</label></td>
+                        <td><textarea id="issue" name="issue" rows="4" cols="50" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="urgency">Urgência:</label></td>
+                        <td>
+                            <select id="urgency" name="urgency" required>
+                                <option value="low">Baixa</option>
+                                <option value="medium">Média</option>
+                                <option value="high">Alta</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form-section">
+                <h2>Preferências de Contato</h2>
+                <table>
+                    <tr>
+                        <td><label for="contact-method">Como quer receber a resposta?</label></td>
+                        <td>
+                            <select id="contact-method" name="contact-method" required>
+                                <option value="email">Email</option>
+                                <option value="phone">Telefone</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
